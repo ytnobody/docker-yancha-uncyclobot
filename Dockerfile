@@ -9,4 +9,7 @@ RUN git submodule update --init
 RUN cpanm --notest --installdeps .
 RUN git submodule foreach cpanm --notest --installdeps .
 
-ENTRYPOINT /bot/worker.pl
+ADD run /bot/run
+RUN chmod +x /bot/run
+
+ENTRYPOINT /bot/run

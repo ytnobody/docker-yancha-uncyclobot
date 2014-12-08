@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while [ 1 ] ; do
+    /bot/worker.pl > /dev/null 2>&1
+    sleep 5
+done
